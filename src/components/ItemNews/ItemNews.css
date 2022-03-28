@@ -1,0 +1,37 @@
+.item{
+    text-decoration: none;
+    height: 450px;
+    margin: 40px auto 30px auto;
+    width: 420px;
+}
+
+.item-cover {
+
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.item-text
+{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #112B3E;
+    height: 150px;
+}
+.item-url{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
