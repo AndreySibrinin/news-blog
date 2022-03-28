@@ -3,6 +3,7 @@
     height: 450px;
     margin: 40px auto 30px auto;
     width: 420px;
+    transition: transform .2s;
 }
 
 .item-cover {
@@ -34,4 +35,9 @@
     color: #FFFFFF;
 
 
+}
+
+
+.item:hover{
+    transform: scale(1.25);
 }

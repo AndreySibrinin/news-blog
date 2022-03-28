@@ -5,7 +5,7 @@ const Layout = () => {
     return (
         <>
             <header>
-                        <Link to={'/articles'}> SHARETRADE.com</Link>
+                        <Link to={'/'}> SHARETRADE.com</Link>
             </header>
             <main>
                 <Outlet/>

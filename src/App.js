@@ -6,7 +6,7 @@ import DetailArticle from "./pages/DetailArticle/DetailArticle";
 function App() {
   return (
       <Routes>
-        <Route path="/articles" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Articles/>} />
             <Route path=":id" element={<DetailArticle/>} />
         </Route>
