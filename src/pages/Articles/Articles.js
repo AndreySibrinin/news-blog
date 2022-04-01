@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import ItemNews from "../../components/ItemNews/ItemNews";
 import {db} from "../../firebase";
 import { ref, onValue} from "firebase/database";
-
+import {dataValidate} from "../../utils";
 
 const Articles = () => {
 
@@ -12,7 +12,9 @@ const Articles = () => {
             const refDb = ref(db, 'news');
             onValue(refDb, (snapshot) => {
                 const data = snapshot.val();
-                setPosts(data);
+                if(Array.isArray(data)){
+                    setPosts(data.filter(dataValidate));
+                }
         });
 
     }, []);
