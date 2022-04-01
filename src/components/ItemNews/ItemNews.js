@@ -3,7 +3,7 @@ import "./ItemNews.css";
 const ItemNews = ({post, index}) => {
     return (
         <div className="item">
-        <Link to={`${index}`} >
+        <Link to={`articles/${index}`} >
 
             <div className="item-cover"
                  style={{backgroundImage: `url(${post.imageUrl})`}}

@@ -1,13 +1,20 @@
 import {useEffect, useState} from "react";
-import {data} from "../../fake_data";
 import ItemNews from "../../components/ItemNews/ItemNews";
+import {db} from "../../firebase";
+import { ref, onValue} from "firebase/database";
+
 
 const Articles = () => {
 
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-       setPosts(data);
+            const refDb = ref(db, 'news');
+            onValue(refDb, (snapshot) => {
+                const data = snapshot.val();
+                setPosts(data);
+        });
+
     }, []);
     return (
 

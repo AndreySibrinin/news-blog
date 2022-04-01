@@ -1,13 +1,18 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {data} from "../../fake_data";
 import "./DetailArticle.css"
+import {db} from "../../firebase";
+import {ref, onValue} from "firebase/database";
 const DetailArticle = () => {
     const {id} = useParams();
     const [post, setPost] = useState(null);
 
     useEffect(() =>{
-        setPost(data[id]);
+        const refDb = ref(db, 'news/' + id);
+        onValue(refDb, (snapshot) => {
+            const data = snapshot.val();
+            setPost(data);
+        });
     }, [id]);
 
     return (
